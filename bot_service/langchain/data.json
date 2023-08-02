@@ -1,0 +1,208 @@
+{
+  "entities": {
+    "elite_category": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [
+            "platinum",
+            "diamond"
+          ],
+          "value": "gold"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    },
+    "validity": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [
+            "days"
+          ],
+          "value": "day"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    },
+    "volume": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [
+            "gb",
+            "gigabyte",
+            "gigabytes"
+          ],
+          "value": "GB"
+        },
+        {
+          "synonyms": [
+            "mb",
+            "megabyte",
+            "megabytes"
+          ],
+          "value": "MB"
+        },
+        {
+          "synonyms": [
+            "minute",
+            "mins",
+            "minutes"
+          ],
+          "value": "min"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    }
+  },
+  "intents": {
+    "buyVoicePackage": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Find me a "
+            },
+            {
+              "entity": "volume",
+              "slot_name": "min_volume",
+              "text": "10 minute"
+            },
+            {
+              "text": " talktime package"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "I need a "
+            },
+            {
+              "entity": "volume",
+              "slot_name": "min_volume",
+              "text": "50 min"
+            },
+            {
+              "text": " voice package"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can I buy a "
+            },
+            {
+              "entity": "volume",
+              "slot_name": "min_volume",
+              "text": "100 minutes"
+            },
+            {
+              "text": " package?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Show me "
+            },
+            {
+              "entity": "volume",
+              "slot_name": "min_volume",
+              "text": "25 Min"
+            },
+            {
+              "text": " voice offers."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Buy "
+            },
+            {
+              "entity": "volume",
+              "slot_name": "min_volume",
+              "text": "25 Min"
+            },
+            {
+              "text": " talktime."
+            }
+          ]
+        }
+      ]
+    },
+    "searchInternetPackage": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Find me a "
+            },
+            {
+              "entity": "volume",
+              "slot_name": "data_volume",
+              "text": "7 GB"
+            },
+            {
+              "text": " internet package"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "I need a "
+            },
+            {
+              "entity": "volume",
+              "slot_name": "data_volume",
+              "text": "10 MB"
+            },
+            {
+              "text": " data package"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can I buy a "
+            },
+            {
+              "entity": "volume",
+              "slot_name": "data_volume",
+              "text": "5 GB"
+            },
+            {
+              "text": " internet package?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Show me "
+            },
+            {
+              "entity": "volume",
+              "slot_name": "data_volume",
+              "text": "2 GB"
+            },
+            {
+              "text": " data packages"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "language": "en"
+}

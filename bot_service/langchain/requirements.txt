@@ -1,0 +1,17 @@
+scipy>= 1.0
+scikit-learn
+Cmake
+flask
+cython
+setuptools
+spacy
+langchain
+langchain_experimental
+pymysql
+pymssql
+openai
+PyPDF2
+faiss-cpu
+tiktoken
+pypdf
+chromadb==0.3.29

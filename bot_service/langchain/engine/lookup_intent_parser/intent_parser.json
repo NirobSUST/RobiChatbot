@@ -1,0 +1,86 @@
+{
+  "config": {
+    "ignore_stop_words": true,
+    "unit_name": "lookup_intent_parser"
+  },
+  "entity_scopes": [
+    {
+      "entity_scope": {
+        "builtin": [],
+        "custom": [
+          "volume"
+        ]
+      },
+      "intent_group": [
+        "buyVoicePackage",
+        "searchInternetPackage"
+      ]
+    }
+  ],
+  "intents_names": [
+    "buyVoicePackage",
+    "searchInternetPackage"
+  ],
+  "language_code": "en",
+  "map": {
+    "-1934527076": [
+      0,
+      [
+        0
+      ]
+    ],
+    "-1848213475": [
+      0,
+      [
+        0
+      ]
+    ],
+    "-980303739": [
+      0,
+      [
+        0
+      ]
+    ],
+    "-839984744": [
+      1,
+      [
+        1
+      ]
+    ],
+    "-427611163": [
+      1,
+      [
+        1
+      ]
+    ],
+    "187227399": [
+      1,
+      [
+        1
+      ]
+    ],
+    "656670697": [
+      1,
+      [
+        1
+      ]
+    ],
+    "853150052": [
+      0,
+      [
+        0
+      ]
+    ],
+    "2013937406": [
+      0,
+      [
+        0
+      ]
+    ]
+  },
+  "slots_names": [
+    "min_volume",
+    "data_volume"
+  ],
+  "stop_words_whitelist": {}
+}

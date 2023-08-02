@@ -1,0 +1,35 @@
+version: "3.2"
+services:
+
+  mock-sql-server:
+    container_name: mock-sql-server
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - 1433:1433
+    environment:
+      SA_PASSWORD: "my_super_secret_pass_for_sql_1299"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - ./mssql/data:/var/opt/mssql/data
+      - ./mssql/log:/var/opt/mssql/log
+
+  mock-service-ssl:
+    container_name: mock-service-ssl
+    image: mock-service-ssl
+    build: ./mock_service/ssl_commerce/.
+    ports:
+      - 4000:4000
+
+  mock-channel-whatsapp:
+    container_name: mock-channel-whatsapp
+    image: mock-channel-whatsapp
+    build: ./channels_service/whats_app/.
+    ports:
+      - 3000:3000
+
+  bot-service:
+    container_name: bot-service
+    image: bot-service
+    build: ./bot_service/langchain/.
+    ports:
+      - 5000:5000

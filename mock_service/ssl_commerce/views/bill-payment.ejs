@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bill Payment</title>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    input {
+      margin: 10px;
+    }
+
+    body {
+      background-color: #dc3545;
+    }
+
+    .form-body {
+      background-color: #1111;
+      display: grid;
+      padding: 50px 100px 50px 100px;
+
+    }
+
+    .btn {
+      height: 40px;
+      background: black;
+      color: white;
+    }
+
+    input {
+      padding: 10;
+      margin: 0;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <form method="POST" action="/process-payment">
+    <div class="form-body">
+      <h1>Bill Payment</h1>
+
+      <label for="customerNumber">Customer Number:</label>
+      <input type="text" id="customerNumber" name="customerNumber" value="<%= customerNumber %>" required>
+
+      <label for="billNumber">Bill Number:</label>
+      <input type="text" id="billNumber" name="billNumber" value="<%= billNumber %>" required>
+
+      <label for="billMonth">Bill Month:</label>
+      <input type="text" id="billMonth" name="billMonth" value="<%= billMonth %>" required>
+
+      <label for="amount">Amount:</label>
+      <input type="text" id="amount" name="amount" value="<%= amount %>" required><br>
+
+      <input class="btn" type="submit" value="Submit">
+    </div>
+  </form>
+</body>
+
+</html>

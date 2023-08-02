@@ -1,0 +1,32 @@
+FROM python:3.10-slim-buster
+
+WORKDIR /app
+ADD . /app
+
+RUN apt-get -y update
+RUN apt-get -y upgrade
+RUN apt install build-essential -y
+
+RUN pip cache purge
+
+RUN pip install --upgrade pip
+RUN pip install numpy==1.21.6
+
+RUN pip install --upgrade wheel
+
+# Install Rust compiler
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+RUN pip install --force-reinstall setuptools-rust
+
+# RUN pip install --no-cache-dir snips-nlu-parsers==0.4.2
+
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
+# RUN python -m snips_nlu download en
+# RUN pip install --force-reinstall -v langchain==v0.0.147
+COPY . .
+
+CMD ["python", "api.py"]

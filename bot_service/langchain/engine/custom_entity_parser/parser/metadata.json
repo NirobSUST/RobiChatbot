@@ -1,0 +1,16 @@
+{
+  "parsers_metadata": [
+    {
+      "entity_identifier": "elite_category",
+      "entity_parser": "parser_1"
+    },
+    {
+      "entity_identifier": "validity",
+      "entity_parser": "parser_2"
+    },
+    {
+      "entity_identifier": "volume",
+      "entity_parser": "parser_3"
+    }
+  ]
+}
